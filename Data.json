@@ -1,0 +1,1237 @@
+{
+  "#GREETINGS": {
+    "training": [
+      "Hi",
+      "Hello",
+      "Hey",
+      "whats up",
+      "Hi Jarvis",
+      "good morining",
+      "good afternoon",
+      "good evening"
+    ],
+    "responses": [
+      "Hi",
+      "Hello Sir",
+      "Hi. how can i help?",
+      "Hello",
+      "Hi Sir"
+    ],
+    "entities": [
+        {
+          "name": "TEXT",
+          "response": "",
+          "required": 1
+        }
+    ],
+    "action": "is_new_day",
+    "event": [],
+    "sub_intents": []
+  },
+  "#APPRECIATE": {
+    "training": [
+      "thanks",
+      "thank you",
+      "well job",
+      "good job",
+      "well done",
+      "good work"
+    ],
+    "responses": [
+      "Thank you sir",
+      "Well its my job sir",
+      "thanks for your appreciation",
+      "Always at ur service Sir"
+    ],
+    "entities": [],
+    "action": "",
+    "event": [],
+    "sub_intents": []
+  },
+  "#THINGS I CAN DO": {
+    "training": [
+      "what can you do for me",
+      "what can you do",
+      "how can you help",
+      "can you help me",
+      "what thing can you do",
+      "what work you do",
+      "list the things that you can do"
+    ],
+    "responses": [
+      "Well i can do many things ",
+      "Heres what i can do for you",
+      "These are some thing that i can do",
+      "Theres a lot I can help with"
+    ],
+    "entities": [],
+    "action": "Personal.my_actions",
+    "event": [],
+    "sub_intents": []
+  },
+  "#INTRODUCTION": {
+    "training": [
+      "who are you",
+      "introduce your self",
+      "introduce yourself",
+      "introduction",
+      "what is ur introduction"
+    ],
+    "responses": [
+      "Allow me to introduce myself. I am Jarvis. A Artificial Desktop Assisstant made by Nikhil Dev. I am there to help you in ur daily task, i can also notify on your mobile phones to stay updated. Try saying What can you do for me. For more information read the docs."
+    ],
+    "entities": [],
+    "action": "",
+    "event": [],
+    "sub_intents": []
+  },
+  "SET REMINDER": {
+    "training": [
+      "set reminder at  ",
+      "make reminder at  ",
+      "add reminder on {DAY} at  ",
+      "remind me for {MESSAGE}  at   on {DAY}",
+      "send me reminder on  ",
+      "set reminder for {MESSAGE} at   ",
+      "set reminder at   on {DAY}",
+      "Remind me to take on the ",
+      "Remind me to before ",
+      "Remind me that on ",
+      "Remind me to "
+    ],
+    "responses": [
+      "Reminder is set at {TIME}",
+      "Reminder is set",
+      "I will remind you, Sir",
+      "Reminder is set at {TIME}",
+      "Sure I will remind you on your specified time"
+    ],
+    "entities": [
+      {
+        "name": "TIME",
+        "response": ["Set Remainder at what time?","At what time could you like to Remind me?"],
+        "required": 1
+      },
+      {
+        "name": "MESSAGE",
+        "response": "What is the message sir?",
+        "required": 1
+      },
+      {
+        "name": "DATE",
+        "response": "What day Sir?",
+        "required": 1
+      }
+    ],
+    "action": "Reminder.set",
+    "event": [],
+    "sub_intents": []
+  },
+  "REMEMBER": {
+    "training": [
+     "remember me ",
+     "remember that my car key in pocket",
+     "remember to take ",
+     "remember me ",
+     "remember that my car key in pocket",
+     "remember to take ",
+     "remember that +"
+    ],
+    "responses": [
+     "Sure sir i will remember that",
+     "Ok I have noted it down",
+     "I will remember it"
+    ],
+    "entities": [
+      {
+        "name": "TEXT",
+        "response": "",
+        "required": 1
+      }
+    ],
+    "action": "remember",
+    "event": [],
+    "sub_intents": []
+  },
+  "SHOW REMEMBERED THINGS": {
+    "training": [
+     "what did i say to remember you",
+     "what did i said to remember you",
+     "show remember",
+     "what you remembered",
+     "list what i to remember"
+    ],
+    "responses": [
+     "Here a couple of things you said",
+     "This is what you said to remeber me",
+     "Heres what you said"
+    ],
+    "entities": [],
+    "action": "show_remembered_things",
+    "event": [],
+    "sub_intents": []
+  },
+  "TELL TIME": {
+    "training": [
+      "what time is now",
+      "what time now",
+      "tell me the time",
+      "time",
+      "can you tell time",
+      "time now",
+      "What is the current time",
+      "Get time",
+      "Can you show me the time",
+      "Can you tell me the time",
+      "Show time"
+    ],
+    "responses": [
+      "It's {TIME} now sir",
+      "The time is {TIME} sir",
+      "Now it's {TIME} sir"
+    ],
+    "entities": [],
+    "action": "Time.now",
+    "event": [],
+    "sub_intents": []
+  },
+  "SET ALARM": {
+    "training": [
+      "set alarm at  ",
+      "wake me at   on {DAY}",
+      "wake me at  ",
+      "set alarm on {DAY} at  ",
+      "set notification"
+    ],
+    "responses": [
+      "Alarm has been set at {TIME}",
+      "Ok i will notify you at {TIME}",
+      "Alarm is set at {TIME}"
+    ],
+    "entities": [
+      {
+        "name": "TIME",
+        "response": "Set at what time?",
+        "required": 1
+      },
+      {
+        "name": "MESSAGE",
+        "response": "Whats your message?",
+        "required": 0
+      }
+    ],
+    "action": "Alarm.set_alarm",
+    "event": [],
+    "sub_intents": []
+  },
+  "PLAY MUSIC": {
+    "training": [
+      "play music",
+      "I want to hear music",
+      "I want to hear song",
+      "play a song",
+      "play some rocking music",
+      "play some rocking song",
+      "I want to listen to music",
+      "I like to listen music",
+      "play my favorite song "
+    ],
+    "responses": [
+      "Sure Sir",
+      "Here we go",
+      "Playing {} song for you",
+      "Ok Sir"
+    ],
+    "entities": [
+      {
+        "name": "TYPE_OF_MUSIC",
+        "response": "",
+        "required": 0
+      },
+      {
+        "name": "ARTIST",
+        "response": "",
+        "required": 0
+      }
+    ],
+    "action": "MusicPlayer.play_music",
+    "event": [
+      "checkAttributes(['SONG PATH'],'Sir i need the path of songs folder. To play songs Checkout Settings')"
+    ],
+    "sub_intents": []
+  },
+  "-PAUSE MUSIC": {
+    "training": [
+      "pause music song",
+      "pause the song",
+      "can you stop music song song",
+      "stop music song song",
+      "stop music song for me song",
+      "stop playing music song song"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Yes Sir",
+      "Pausing a music song for you sir"
+    ],
+    "entities": [],
+    "action": "MusicPlayer.pause",
+    "event": [],
+    "sub_intents": []
+  },
+  "-RESUME MUSIC": {
+    "training": [
+      "resume music song",
+      "can you resume music song",
+      "continue music song",
+      "resume music song for me",
+      "play music song"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Yes Sir",
+      "Resuming a music song for you sir"
+    ],
+    "entities": [],
+    "action": "MusicPlayer.resume",
+    "event": [],
+    "sub_intents": []
+  },
+  "-NEXT MUSIC": {
+    "training": [
+      "next music song",
+      "can you play next music song",
+      "play next music song",
+      "play next music song for me",
+      "play the next music song"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Yes Sir",
+      "Playing next music song for you sir"
+    ],
+    "entities": [],
+    "action": "MusicPlayer.next",
+    "event": [],
+    "sub_intents": []
+  },
+  "-PREVIOUS MUSIC": {
+    "training": [
+      "previous music song",
+      "can you play previous music song",
+      "play previous music song",
+      "play previous music song for me",
+      "play the previous music song"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Yes Sir",
+      "Playing previous music song for you sir"
+    ],
+    "entities": [],
+    "action": "MusicPlayer.previous",
+    "event": [],
+    "sub_intents": []
+  },
+  "WINDOWS SHUTDOWN":{
+    "training": [
+      "shutdown the system",
+      "shutdown the system after 10 min",
+      "can you shutdown the system",
+      "i want to shutdown my system",
+      "shutdown the desktop",
+      "shutdown the desktop after 10 min",
+      "can you shutdown the desktop",
+      "i want to shutdown my pc",
+      "shutdown the pc for some time"
+    ],
+    "responses": [],
+    "entities": [
+      {
+        "name": "TIME",
+        "response": "",
+        "required": 0
+      }
+    ],
+    "action": "*System.shutdown",
+    "event": [],
+    "sub_intents": []
+  },
+  "WINDOWS SLEEP": {
+    "training": [
+      "sleep the system",
+      "sleep the system after 10 min",
+      "can you sleep the system",
+      "i want to sleep my system",
+      "sleep the desktop",
+      "sleep the desktop after 10 min",
+      "can you sleep the desktop",
+      "i want to sleep my pc",
+      "sleep the pc for some time"
+    ],
+    "responses": [],
+    "entities": [
+      {
+        "name": "TIME",
+        "response": "",
+        "required": 0
+      }
+    ],
+    "action": "*System.sleep",
+    "event": [],
+    "sub_intents": []
+  },
+  "WINDOWS RESTART": {
+    "training": [
+      "restart the pc",
+      "restart the system",
+      "restart the pc after 10 min",
+      "can you restart the system",
+      "reboot the system",
+      "can you reboot the system",
+      "reboot the system after 5 min",
+      "i want to restart the pc",
+      "plese restart the system ",
+      "can you restart the pc",
+      "i want to restart the system",
+      "please restart my pc",
+      "restart the desktop",
+      "restart the desktop after 10 min",
+      "i want to restart the desktop",
+      "please restart my desktop"
+    ],
+    "responses": [
+      "ok sir",
+      "sure sir",
+      "system will restart in few seconds",
+      "please wait some time "
+    ],
+    "entities": [
+      {
+        "name": "TIME",
+        "response": "",
+        "required": 0
+      }
+    ],
+    "action": "*System.restart",
+    "event": [],
+    "sub_intents": []
+  },
+  "WINDOWS HIBERNATE": {
+    "training": [
+      "hibernate the system",
+      "hibernate the pc",
+      "hibernate the desktop",
+      "go in deep sleep mode",
+      "bring the system in hybernet mode",
+      "hibernat",
+      "hibernate the system after 10 min",
+      "hibernate the pc after 10 min",
+      "hibernate the desktop after 10 min"
+    ],
+    "responses": [
+      "ok sir ",
+      "sure sir",
+      "system is going in hybernet mode",
+      "please wait some time"
+    ],
+    "entities": [
+      {
+        "name": "TIME",
+        "response": "",
+        "required": 0
+      }
+    ],
+    "action": "*System.hibernate",
+    "event": [],
+    "sub_intents": []
+  },
+  "#UNKNOW CAMMAND": {
+    "training": [
+      "12 + 23",
+      "45 * 23",
+      "123 / 743",
+      "8362 - 28391",
+      "74392 % 7482",
+      "830284 + 73901",
+      "920402 * 93023",
+      "754298 - 985188",
+      "4598275 / 389183",
+      "498019 + 9840294"
+    ],
+    "responses": ["i am unable to understand","did not understand","i dont know what to do  "],
+    "entities": [
+      {
+        "name":"TEXT",
+        "response":"",
+        "required":1
+      }
+    ],
+    "action": "default_google_search",
+    "event": [],
+    "sub_intents": []
+  },
+  "TAKE SCREENSHOT": {
+    "training": [
+      "take screenshot",
+      "take screenshot of current window",
+      "take screenshot of window",
+      "screenshot window",
+      "capture the current screen",
+      "capture the screen",
+      "screenshot the current window",
+      "open snipping tool and take screenshot",
+      "capture the window"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Wait a second"
+    ],
+    "entities": [],
+    "action": "Screenshot.takeScreenshot",
+    "event": [],
+    "sub_intents": []
+  },
+  "TAKE A PHOTO": {
+    "training": [
+      "take a  picture",
+      "take a selfy",
+      "take a photo",
+      "camera shot",
+      "camera click"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir"
+    ],
+    "entities": [],
+    "action": "takePhoto",
+    "event": [],
+    "sub_intents": []
+  },
+  "SHOW PHOTOS": {
+    "training": [
+      "show my photos",
+      "open photos",
+      "run photos",
+      "show me photos",
+      "open the photos folder",
+      "execute photos",
+      "show me all photos"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Wait a second"
+    ],
+    "entities": [],
+    "action": "*ShowFiles.photos",
+    "event": [],
+    "sub_intents": []
+  },
+  "SHOW DOCUMENTS": {
+    "training": [
+      "show my documents",
+      "open documents",
+      "run documents",
+      "show me documents",
+      "open the documents folder",
+      "execute documents",
+      "show me all documents"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Wait a second"
+    ],
+    "entities": [],
+    "action": "*ShowFiles.documents",
+    "event": [],
+    "sub_intents": []
+  },
+  "OPEN APPS|TAGS": {
+    "training": [
+      "open 123",
+      "run the ",
+      "can you open ",
+      "can you run ",
+      "start the ",
+      "can you start "
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir"
+    ],
+    "entities": [
+      {
+        "name": "APP|TAG",
+        "response": "which application or tag could you like to open?",
+        "required": 0
+      }
+    ],
+    "action": "open_app_and_tag",
+    "event": [],
+    "sub_intents": []
+  },
+  "TELL DATE": {
+    "training": [
+      "tell date",
+      "tell me todays date",
+      "what is date",
+      "today what date",
+      "can you tell me todays date",
+      "will you tell me date",
+      "please tell me todays date",
+      "at today what is the date",
+      "what is date on tomorrow",
+      "tell date of tomorrow",
+      "date on tomorrow",
+      "what is date on next {DAY}",
+      "date on {DAY}"
+    ],
+    "responses": [
+      "Today is {DATE}",
+      "Its {DATE}"
+    ],
+    "entities": [],
+    "action": "Date.tell",
+    "event": [],
+    "sub_intents": []
+  },
+  "Search File": {
+    "training": [
+      "search the {FILE}",
+      "search {FILE} for me",
+      "can you search this {FILE}",
+      "find the {FILE}",
+      "please search {FILE} in pc",
+      "can you find {FILE} for me"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Wait a second"
+    ],
+    "entities": [
+      {
+        "name": "FILE",
+        "response": "which file you want to search",
+        "required": 1
+      }
+    ],
+    "action": "",
+    "event": [],
+    "sub_intents": []
+  },
+  "Check News": {
+    "training": [
+      "what are today headlines",
+      "search todays news for me",
+      "tell the todays news",
+      "show me top headlines",
+      "show me headlines for today",
+      "what is todays news",
+      "show me top news of todays",
+      "what are the bullentins of today",
+      "tell me news",
+      "show the bulletins",
+      "show headlines"
+    ],
+    "responses": [
+      "OK Sir",
+      "Sure Sir",
+      "Wait a second",
+      "i am collecting news for you"
+    ],
+    "entities": [],
+    "action": "Extra.tell_news",
+    "event": [
+      "isOnline"
+    ],
+    "sub_intents": []
+  },
+  "Tell Weather": {
+    "training": [
+      "tell the weather of today",
+      "show weather",
+      "tell the weather of today at {LOCATION}",
+      "track the weather of today",
+      "what is today weather",
+      "what is weather on {TIME}",
+      "what is today weather at {LOCATION}",
+      "show me the weather",
+      "what is the weather on {DATE} at {LOCATION}",
+      "what is the weather on {DATE}",
+      "what the weather",
+      "tell weather"
+    ],
+    "responses": [
+      "This was report"
+    ],
+    "entities": [
+      {
+        "name": "LOCATION",
+        "response": "which location you want to look weather",
+        "required": 0
+      },
+      {
+        "name": "TIME",
+        "response": "on which time you want to see",
+        "required": 0
+      },
+      {
+        "name": "DATE",
+        "response": "on which date you have to see weather",
+        "required": 0
+      }
+    ],
+    "action": "Extra.tell_weather",
+    "event": [
+      "isOnline"
+    ],
+    "sub_intents": []
+  },
+  "Window Minimize": {
+    "training": [
+      "minimize this window",
+      "can  u minimize this window",
+      "minimize",
+      "minimize all windows"
+    ],
+    "responses": [
+      "window minimized",
+      "minimized"
+    ],
+    "entities": [],
+    "action": "*Window.minimize",
+    "event": [],
+    "sub_intents": []
+  },
+  "Window maximize": {
+    "training": [
+      "restore the window",
+      "maximize the window",
+      "can you maximize the window again",
+      "please maximize the window  "
+    ],
+    "responses": [
+      "window restored",
+      "window minimized"
+    ],
+    "entities": [],
+    "action": "*Window.maximize",
+    "event": [],
+    "sub_intents": []
+  },
+  "Window move": {
+    "training": [
+      "move the window",
+      "can you move the window ",
+      "please move the window",
+      "displace the window"
+    ],
+    "responses": [
+      "Window have been selected use arrows keys to move",
+      "place your window using arrow keys",
+      "use arrows keys to move"
+    ],
+    "entities": [],
+    "action": "*Window.move",
+    "event": [],
+    "sub_intents": []
+  },
+  "Desktop create": {
+    "training": [
+      "create a new desktop",
+      "i need a fresh desktop",
+      "new desktop please",
+      "i need new desktop",
+      "create virtual desktop"
+    ],
+    "responses": [
+      "Sure Sir",
+      "Here your new desktop",
+      "new desktop for you ",
+      "this is your fresh desktop",
+      "Here we go to new desktop"
+    ],
+    "entities": [],
+    "action": "*Desktop.create",
+    "event": [],
+    "sub_intents": []
+  },
+  "Desktop pervious": {
+    "training": [
+      "move to left desktop",
+      "move to previous desktop ",
+      "move to back to desktop",
+      "show me previous desktop",
+      "swtich to previous desktop",
+      "move to previous desk"
+    ],
+    "responses": [
+      "Ok",
+      "Previous desktop",
+      "back to previous desktop"
+    ],
+    "entities": [],
+    "action": "*Desktop.switch_previous",
+    "event": [],
+    "sub_intents": []
+  },
+  "Desktop next": {
+    "training": [
+      "move to right desktop",
+      "move to next desktop ",
+      "move to forward  desktop",
+      "show me next desktop",
+      "move to right desktop",
+      "swtich to next desktop",
+      "move to next desk"
+    ],
+    "responses": [
+      "next desktop",
+      "!"
+    ],
+    "entities": [],
+    "action": "*Desktop.switch_next",
+    "event": [],
+    "sub_intents": []
+  },
+  "Desktop show": {
+    "training": [
+      "I want see all the desktop",
+      "show all desktop",
+      "show first desktop",
+      "jump to last desktop",
+      "switch to desk 1",
+      "switch to desk 2",
+      "show second desktop",
+      "move to desktop 3"
+    ],
+    "responses": [
+      "Sure",
+      "OK",
+      "!"
+    ],
+    "entities": [
+      {
+        "name": "NUMBER",
+        "response": "",
+        "required": 0
+      }
+    ],
+    "action": "*Desktop.switch_to",
+    "event": [],
+    "sub_intents": []
+  },
+  "Volume Set": {
+    "training": [
+      "set volume to {VALUE} percent",
+      "decrease the sound",
+      "volume to {VALUE} ",
+      "volume {VALUE}",
+      "increase the volume",
+      "increase the volume by {VALUE}",
+      "decrease the volume ",
+      "decrease the volume  by {VALUE}",
+      "reduce the voulume by {VALUE}",
+      "increase the sound"
+    ],
+    "responses": [
+      "!"
+    ],
+    "entities": [
+      {
+        "name": "VALUE",
+        "response": "set volume to?",
+        "required": 1
+      }
+    ],
+    "action": "Volume.set_volume",
+    "event": [],
+    "sub_intents": []
+  },
+  "Volume Mute": {
+    "training": [
+      "mute",
+      "mute the volume",
+      "mute the sound"
+    ],
+    "responses": [],
+    "entities": [],
+    "action": "Volume.mute_volume",
+    "event": [],
+    "sub_intents": []
+  },
+  "Brightness Set": {
+    "training": [
+      "increase the brightness",
+      "decrease the brightness",
+      "reduce the brightness by {VALUE}",
+      "increase the brightness by {VALUE}",
+      "set brightness to {VALUE}"
+    ],
+    "responses": [],
+    "entities": [
+      {
+        "name": "VALUE",
+        "response": "Set Brightness to?",
+        "required": 1
+      }
+    ],
+    "action": "Brightness.set_brightness",
+    "event": [],
+    "sub_intents": []
+  },
+  "Unmute Volume": {
+    "training": [
+      "Unmute Volume",
+      "sound back",
+      "speak",
+      "remove silent",
+      "volume restore",
+      "unmute the volume",
+      "speak",
+      "don't mute",
+      "volume back",
+      "remove mute volume",
+      "remove mute from sound"
+    ],
+    "responses": [],
+    "entities": [],
+    "action": "Volume.unmute_volume",
+    "event": [],
+    "sub_intents": []
+  },
+  "Mute Volume": {
+    "training": [
+      "mute Volume",
+      "slient",
+      "stop",
+      "silence",
+      "Mute up",
+      "mute plz",
+      "mute it",
+      "mute volume"
+    ],
+    "responses": [],
+    "entities": [],
+    "action": "Volume.mute_volume",
+    "event": [],
+    "sub_intents": []
+  },
+  "IP Address": {
+    "training": [
+      "what is my ip address",
+      "tell me the ip address of pc",
+      "ip",
+      "get ip",
+      "show ip address",
+      "can you show me ip adress"
+    ],
+    "responses": [],
+    "entities": [],
+    "action": "Network.tell_my_ip",
+    "event": [],
+    "sub_intents": []
+  },
+  "Battery Status": {
+    "training": [
+      "what is my battery level",
+      "get battery level",
+      "battery",
+      "show me the battery status",
+      "get battery status",
+      "can you show battery levels"
+    ],
+    "responses": [],
+    "entities": [],
+    "action": "System.tell_battery_status",
+    "event": [],
+    "sub_intents": []
+  },
+  "READ Text": {
+    "training": [
+      "read this text",
+      "read the selected text",
+      "start reading",
+      "read text"
+    ],
+    "responses": [],
+    "entities": [],
+    "action": "read_text",
+    "event": [],
+    "sub_intents": []
+  },
+  "TAG FILE": {
+    "training": [
+      "tag this as {SOMETHING}",
+      "tag as {FILE}",
+      "tag it as {SOMETHIING}",
+      "tag this file as {FOLDER}",
+      "tag this folder as {FOLDER}",
+      "remember this as {SOMETHING}",
+      "remember it as {SOMETHING}"
+    ],
+    "responses": ["Tagged","Item tagged","Done Sir"],
+    "entities": [{
+      "name": "TEXT",
+      "response": "Nothing Found?",
+      "required": 1
+    }],
+    "action": "*Extra.tag_it",
+    "event": [],
+    "sub_intents": []
+  },
+  "WHATS ON DATE": {
+    "training": [
+      "whats today",
+      "what is today",
+      "what is specail about today",
+      "what is on 6 June",
+      "what is tomorrow",
+      "what was yesterday",
+      "what is on Feb 14",
+      "what is on Jan 14",
+      "what is on March"
+
+    ],
+    "responses": [],
+    "entities": [{
+      "name": "DATE",
+      "response": "Which day would like the see Sir?",
+      "required": 1
+    }],
+    "action": "Extra.tell_day_event",
+    "event": [],
+    "sub_intents": []
+  },
+  "QR CODE GENERATOR": {
+    "training": [
+      "generate qrcode of text",
+      "create qrcode of text",
+      "make qrcode of text",
+      "get qrcode"
+    ],
+    "responses": ["Here is your qrcode","Qrcode generated","take a look at qrcode"],
+    "entities": [],
+    "action": "Extra.create_qrcode",
+    "event": [],
+    "sub_intents": []
+  },
+  "ADD CALENDAR EVENT": {
+    "training": [
+      "add event to calendar",
+      "add event in calendar",
+      "add event on calendar",
+      "add calendar event",
+      "add today as birthday ",
+      "add 6th June  as Birthday",
+      "On 12 March there is Aniversary",
+      "Person Birthday is on",
+      "add 4 March as Holiday"
+    ],
+    "responses": ["Event added to calendar Sir","Event added Sir ","I added this event in calendar Sir","I Marked event in calendar Sir"],
+    "entities": [
+      {
+        "name": "DATE",
+        "response": "At what date would you like to add sir?",
+        "required": 1
+      },
+      {
+        "name": "EVENT",
+        "response": ["What is the event Sir?","is the event birthday , aniversary or something else?"],
+        "required": 1
+      }
+
+    ],
+    "action": "Extra.add_event",
+    "event": [],
+    "sub_intents": []
+  },
+  "SEND EMAIL": {
+    "training": [
+      "send email",
+      "send mail to {EMAIL}",
+      "send email to {MAIL} and set subject as {SUBJECT}",
+      "post email to {EMAIL}",
+      "redirect mail to {EMAIL}",
+      "send mail to {EMAIL} and set message as {MESSAGE}"
+    ],
+    "responses": [
+      "Email Sent",
+      "Email Sent Successfully",
+      "Email sent to {EMAIL_ADDRESS}"
+    ],
+    "entities": [
+      {
+        "name": "EMAIL_ADDRESS",
+        "response": "Whom do you want to send it?",
+        "required": 1
+      },
+      {
+        "name": "MESSAGE",
+        "response": "whats is the message?",
+        "required": 1
+      }
+    ],
+    "action": "Email.send_email",
+    "event": [
+      "isOnline",
+      "checkAttributes(['EMAIL','EMAIL PASSWORD'],'Sir the credential are missing for sending email. Please check the Settings')"
+    ],
+    "sub_intents": []
+  },
+  "SHOW EMAIL": {
+    "training": [
+      "show emails",
+      "show mail",
+      "Show my indox",
+      "Show all received emails",
+      "show mails",
+      "See my emails",
+      "open gmail",
+      "Look my emails"
+    ],
+    "responses": [
+      "Take a look at your emails",
+      "Here is your Emails Sir",
+      "Opening Gmail Account",
+      "See the Emails Sir"
+    ],
+    "entities":[],
+    "action": "Email.show_emails",
+    "event": [
+      "isOnline"
+    ],
+    "sub_intents": []
+  },
+  "REPLY INCOMING EMAIL": {
+    "training": [
+      "reply back to email",
+      "reply email",
+      "send a reply",
+      "reply the email",
+      "send a reply to "
+    ],
+    "responses": [
+      "Reply Sent to {EMAIL_ADDRESS}",
+      "Email Sent to {EMAIL_ADDRESS}",
+      "Reply got sent sir",
+      "Repiled to email"
+    ],
+    "entities": [
+      {
+        "name": "EMAIL_ADDRESS",
+        "response": "Whom do you want to send?",
+        "required": 0
+      },
+      {
+        "name": "MESSAGE",
+        "response": "what is the message for mail",
+        "required": 0
+      }
+    ],
+    "action": "Email.send",
+    "event": [
+      "isOnline",
+      "checkAttributes(['EMAIL','EMAIL PASSWORD'],'Sir the credential are missing for sending email. Please check the Settings')"
+    ],
+    "sub_intents": []
+  },
+  "LOCATE ON MAP": {
+    "training": [
+      "where is {LOCATION} on map",
+      "Locate on map ",
+      "Find {LOCATION} on map",
+      "Search {LOCATION} on map"
+    ],
+    "responses": ["Here is your search results","See it on map sir","Location Found"],
+    "entities": [
+      {
+        "name":"TEXT",
+        "response":"",
+        "required":1
+      },
+      {
+        "name":"LOCATION",
+        "response":"",
+        "required":0
+      }
+    ],
+    "action": "locate_on_map",
+    "event": ["isOnline"],
+    "sub_intents": []
+  },
+  "MATHS": {
+    "training": [
+      "what is {no} plus {No}",
+      "add  {no} and  {no}",
+      "divide multiply times subtract minus into ",
+      "fractorial of {no} ",
+      "square root of {no}",
+      "square of {no}",
+      "tan sin cos of {no}",
+      "cube of {no}",
+      "{no} raise of {no}"
+    ],
+    "responses": ["Its {MATHS} Sir","According to my calculation its {MATHS}","The answer is {MATHS}"],
+    "entities": [
+      {
+        "name":"MATHS",
+        "response":"",
+        "required":0
+      }
+    ],
+    "action": "",
+    "event": [],
+    "sub_intents": []
+  },
+  "SNIP & DETECT": {
+    "training": [
+      "snipp and detect",
+      "snipp",
+      "mark the region",
+      "detect for Ui changes",
+      "Inform me when change is detected",
+      "Notifiy on change"
+    ],
+    "responses": [],
+    "entities": [],
+    "action": "SnipAndDetect.snip",
+    "event": [],
+    "sub_intents": []
+  },
+  "ADD CONTACT": {
+    "training": [
+      "add contact",
+      "create contact",
+      "i want to an add contact"
+    ],
+    "responses": [],
+    "entities": [],
+    "action": "add_contact",
+    "event": [],
+    "sub_intents": []
+  },
+  "SHOW CONTACTS": {
+    "training": [
+      "show contact",
+      "list contact",
+      "contacts",
+      "i want to see contacts",
+      "i like to all contacts"
+    ],
+    "responses": ["Here is your contacts","Contacts on your screen sir","Have a look at contacts list"],
+    "entities": [],
+    "action": "#os.system('start Data/Contacts.xlsx')",
+    "event": [],
+    "sub_intents": []
+  }
+}
